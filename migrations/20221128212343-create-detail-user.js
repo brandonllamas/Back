@@ -25,7 +25,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       State:{
-        type:DataTypes.INTEGER,
+        type:Sequelize.INTEGER,
         defaultValue:1,
         allowNull:false
       },
