@@ -4,12 +4,12 @@ const Server = require('./Config/server')
 
 const server = new Server()
 
-server.listen()
 
 
 
 
 
 // =========================== Service ======================
+server.listen()
 
 // ==========================================================
