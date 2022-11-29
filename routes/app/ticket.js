@@ -1,4 +1,7 @@
 const { Router } = require("express");
+const param = require("../../models/param");
+
+const models = require('../../models').Ticket
 
 const router = Router();
 
@@ -8,9 +11,12 @@ router.post('/create',(req,res)=>{
     })
 })
 
-router.get('/list',(req,res)=>{
+router.get('/',(req,res)=>{
+    const product = models.findAll()
     res.json({
-        res:'respuest'
+       msg:'Datos obtenidos',
+       code:200,
+       data:product
     })
 })
 

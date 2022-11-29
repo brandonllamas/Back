@@ -11,6 +11,9 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Param.hasMany(models.Value_param,{
+        foreignKey:'Param_id'
+      })
     }
   }
   Param.init({

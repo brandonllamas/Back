@@ -1,6 +1,7 @@
 const { Router } = require("express");
 
 const router = Router();
+const models = require('../../models').Param
 
 router.post('/create',(req,res)=>{
     res.json({
@@ -8,9 +9,12 @@ router.post('/create',(req,res)=>{
     })
 })
 
-router.get('/list',(req,res)=>{
+router.get('/', async (req,res) =>{
+    const product = await models.findAll()
     res.json({
-        res:'respuest'
+       msg:'Datos obtenidos',
+       code:200,
+       data:product
     })
 })
 

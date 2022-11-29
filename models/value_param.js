@@ -2,6 +2,7 @@
 const {
   Model
 } = require('sequelize');
+const param = require('./param');
 module.exports = (sequelize, DataTypes) => {
   class Value_param extends Model {
     /**
