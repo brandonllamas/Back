@@ -14,7 +14,9 @@ class Server {
     routes() {
         
         this.app.use('/api/auth',require('../routes/auth/auth'))
-        this.app.use('/api/auth/ticket',require('../routes/app/ticket'))
+        this.app.use('/api/app/ticket',require('../routes/app/ticket'))
+        this.app.use('/api/app/user',require('../routes/app/user'))
+        this.app.use('/api/app/param',require('../routes/app/param'))
 
         this.app.get('/api', (req, res) => {
             res.send('222')
