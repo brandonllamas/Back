@@ -19,7 +19,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       detail_user: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
       state:{
         type:Sequelize.INTEGER,

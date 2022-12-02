@@ -1,23 +1,63 @@
 const { Router } = require("express");
 
+const models = require('../../models').User
 const router = Router();
 
-router.post('/create',(req,res)=>{
+router.post('/', async (req, res) => {
+    // console.log(req.body);
+    let bod = req.body;
+    try {
+        const jane = await models.create({
+            Nombre: bod.nombre,
+            Apellido: bod.apellido,
+            Email: bod.email,
+            pass: bod.password,
+        });
+    
+        res.json({
+            code: 200,
+            data: jane,
+            res: 'respuest'
+        }) 
+    } catch (error) {
+        
+        res.json({
+            code: 200,
+            data: null,
+            res: 'data violada'
+        }) 
+    }
+   
+})
+
+router.get('/', (req, res) => {
+    const product = models.findAll()
     res.json({
-        res:'respuest'
+        msg: 'Datos obtenidos',
+        code: 200,
+        data: product
     })
 })
 
-router.get('/list',(req,res)=>{
-    res.json({
-        res:'respuest'
-    })
-})
 
+router.post('/update', async (req, res) => {
+    let bod = req.body;
 
-router.post('/update',(req,res)=>{
+    const jane = await models.update({
+        Nombre: bod.nombre,
+        Apellido: bod.apellido,
+        Email: bod.email,
+        pass: bod.password,
+    }, {
+        where: {
+            id: bod.id
+        }
+    });
+
     res.json({
-        res:'respuest'
+        code: 200,
+        data: jane,
+        res: 'respuest'
     })
 })
 

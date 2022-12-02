@@ -1,13 +1,15 @@
 const cors = require('cors')
 const cowsay = require("cowsay");
 const express = require('express');
-
+const bodyParser = require('body-parser');
 
 class Server {
 
     constructor() {
         this.app = express()
         this.port = process.env.PORT || 8080
+        this.app.use(express.json())
+        this.app.use(express.urlencoded({ extended: true }))
         this.routes()
     }
 
