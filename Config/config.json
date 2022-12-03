@@ -1,23 +1,23 @@
 {
   "development": {
-    "username": "root",
-    "password": null,
-    "database": "ludyticket",
-    "host": "127.0.0.1",
+    "username": "virtualt_ludyticket",
+    "password": "NAC{rrJ[?bv$",
+    "database": "virtualt_ludyticket",
+    "host": "192.96.200.110",
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "ludyticket",
-    "host": "127.0.0.1",
+    "username": "virtualt_ludyticket",
+    "password": "NAC{rrJ[?bv$",
+    "database": "virtualt_ludyticket",
+    "host": "192.96.200.110",
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "username": "virtualt_ludyticket",
+    "password": "NAC{rrJ[?bv$",
+    "database": "virtualt_ludyticket",
+    "host": "192.96.200.110",
     "dialect": "mysql"
   }
 }
