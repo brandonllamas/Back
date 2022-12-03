@@ -12,7 +12,7 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-     await queryInterface.bulkInsert('value_params',[
+     await queryInterface.bulkInsert('Value_params',[
       //============ Areas
 
       {

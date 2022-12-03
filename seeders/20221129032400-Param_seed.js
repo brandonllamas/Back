@@ -12,7 +12,7 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-   await queryInterface.bulkInsert('params',[
+   await queryInterface.bulkInsert('Params',[
     {
       Name:'Areas',
       Descripcion:'Nombre de las areas de trabajo',
