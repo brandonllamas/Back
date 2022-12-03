@@ -16,17 +16,20 @@ class Server {
 
     routes() {
     
-        this.app.use('/api/auth',require('../routes/auth/auth'))
-        this.app.use('/api/app/ticket',require('../routes/app/ticket'))
-        this.app.use('/api/app/user',require('../routes/app/user'))
-        this.app.use('/api/app/param',require('../routes/app/param'))
+        this.app.use('/Nodejs/api/auth',require('../routes/auth/auth'))
+        this.app.use('/Nodejs/api/app/ticket',require('../routes/app/ticket'))
+        this.app.use('/Nodejs/api/app/user',require('../routes/app/user'))
+        this.app.use('/Nodejs/api/app/param',require('../routes/app/param'))
 
         this.app.get('/api', (req, res) => {
             res.send('222')
         })
 
         this.app.get('*', (req, res) => {
-            res.send('404')
+            // res.send('404')
+            res.json({
+                'dat':this.app.routes 
+            })
         })
     }
 
