@@ -9,12 +9,13 @@ class Server {
         this.app = express()
         this.port = process.env.PORT || 8080
         this.app.use(express.json())
+        this.app.use(cors())
         this.app.use(express.urlencoded({ extended: true }))
         this.routes()
     }
 
     routes() {
-        
+    
         this.app.use('/api/auth',require('../routes/auth/auth'))
         this.app.use('/api/app/ticket',require('../routes/app/ticket'))
         this.app.use('/api/app/user',require('../routes/app/user'))

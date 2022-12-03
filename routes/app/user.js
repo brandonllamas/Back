@@ -30,8 +30,8 @@ router.post('/', async (req, res) => {
    
 })
 
-router.get('/', (req, res) => {
-    const product = models.findAll()
+router.get('/', async (req, res) => {
+    const product =await models.findAll()
     res.json({
         msg: 'Datos obtenidos',
         code: 200,
